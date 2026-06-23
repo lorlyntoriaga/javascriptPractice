@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Prompt popup</title>
+    <script>
+      var javascriptGrade = parseInt(prompt("Please enter Student's Javascript grade: "));
+      var javaGrade = parseInt(prompt("Please enter Student's Java grade: "));
+      var dotNetGrade = parseInt(prompt("Please enter Student's .NET grade: "));
+
+      // create total for 3 grade
+      var total = javascriptGrade + javaGrade + dotNetGrade;
+      document.write("Total Marks: " + total + "<br/>");
+
+      var average = total / 3;
+      document.write("Total Average: " + average + "<br/>");
+
+
+      if (javascriptGrade == 35 && javaGrade == 35 && dotNetGrade == 35) {
+        document.write("Passed");
+      }
+      else if (average >= 36 && average <= 59) {
+        document.write("C");
+      }
+      else if (average >= 60 && average <= 69) {
+        document.write("B");
+      }
+      else if (average >= 70 && average <= 100) {
+        document.write("A");
+      } else (
+        document.write("Result: Failed")
+      )
+    </script>
+  </head>
+
+  <body></body>
+</html>
