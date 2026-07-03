@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Assignment</title>
+    <script>
+      let num = parseInt(prompt("Enter a number:"));
+      let i = 1;
+
+      do {
+        if (i % 3 === 0) {
+          i++;
+          continue; // Skip multiples of 3
+        }
+        
+
+        document.write(i);
+        i++;
+      } while (i <= num);
+    </script>
+  </head>
+  <body></body>
+</html>
