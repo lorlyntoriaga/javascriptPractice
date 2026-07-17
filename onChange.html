@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>onchange</title>
+    <script>
+      function onchangeHandleEvent(x) {
+        document.bgColor = x;
+      }
+    </script>
+  </head>
+
+  <body>
+    <select onchange="onchangeHandleEvent(this.value)">
+      <option value="">Select any Color</option>
+      <option value="blue">Blue</option>
+      <option value="yellow">Yellow</option>
+      <option value="red">Red</option>
+    </select>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>User defined Function to Handle Events</title>
+    <script>
+        function handleMouseOverEvent(x) {
+            x.style.color = "red";
+            x.style.backgroundColor = "yellow";
+            x.innerHTML = "MOUSEOVER"
+        }
+
+         function handleMouseOutEvent(y) {
+            y.style.color = "red";
+            y.style.backgroundColor = "blue"
+            Y.innerHTML = "MOUSEOUT"
+
+        }
+
+    </script>
+  </head>
+
+  <body>
+    <p onmouseover="handleMouseOverEvent(this)" onmouseout="handleMouseOutEvent(this)">Mouse Over / Mouse Out</p>
+  </body>
+</html>

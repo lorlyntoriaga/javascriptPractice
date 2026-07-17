@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Mouse over and Mouse Out </title>
+        <script>
+           function handleMouseOver(a){
+            a.style.color = "red";
+            a.style.backgroundColor = "yellow"
+            a.innerHTML = "MouseOver"
+           }
+
+
+           function handleMouseOut(b){
+            b.style.color = "yellow";
+            b.style.backgroundColor = "blue"
+            b.innerHTML = "MouseOut"
+           }
+
+
+        </script>
+    </head>
+
+<body>
+<marquee onmouseover="stop()" onmouseout="start()">Start / Stop</marquee>
+
+</body>    
+</html>

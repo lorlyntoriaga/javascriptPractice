@@ -3,13 +3,21 @@
   <head>
     <title>Local and Global Variables</title>
     <script>
+      var y = 30;
 
         function fun1() {
             var x = 20;
             document.write("Inside fun1 X: " + x + "<br>")
+            document.write("Inside fun1 Y: " + y + "<br>")
         }
         fun1();
-        document.write("Outside function")
+        document.write("Outside fun1 Y" + y + "<br>")
+
+         function fun2() {
+            var a = 20;
+            document.write("Inside fun1 X: " + x + "<br>")
+            document.write("Inside fun1 Y: " + y + "<br>")
+        }
      
 
     </script>
