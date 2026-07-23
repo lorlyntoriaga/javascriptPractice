@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>onload print</title>
+    <script>
+      function handleOnloadRedirect(x){
+        window.location = "http://www.google.com";
+      }
+
+      function waitForFiveSecEventHandler(){
+        setTimeout(handleOnloadRedirect,5000)
+      }
+
+    </script>
+  </head>
+
+  <body onload="waitForFiveSecEventHandler()">
+    <b>Redirecting . . .</b>
+  </body>
+</html>

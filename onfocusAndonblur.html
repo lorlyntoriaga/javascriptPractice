@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>onfocus/onblur</title>
+    <script>
+      function onfocusEventHandler(x){
+        x.style.color = "red";
+        x.style.backgroundColor = "blue";
+
+      }
+
+      function onblurEventHandler(x){
+        x.style.color = "blue";
+        x.style.backgroundColor = "red";
+      }
+
+    </script>
+  </head>
+
+  <body>
+    <input type = text onfocus="onfocusEventHandler(this)" onblur="onblurEventHandler(this)"> </input>
+  </body>
+</html>

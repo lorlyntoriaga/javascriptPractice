@@ -3,17 +3,18 @@
     <title>onchange</title>
     <script>
       function onchangeHandleEvent(x) {
-        window.location = x;
+        document.body.style.backgroundImage = "url('"+x+"')";
       }
     </script>
   </head>
 
   <body>
     <select onchange="onchangeHandleEvent(this.value)">
-      <option value="">Select a Website</option>
-      <option value="http://www.google.com">Google</option>
-      <option value="http://www.facebook.com">Facebook</option>
-      <option value="http://www.Youtube.com">Youtube</option>
+    // make the "\" directory divider in to "/" to locate the image
+      <option value="">Select an Image</option>
+      <option value="Images/otter.jpg">Otter</option>
+      <option value="Images/squirrel.jpg">Squirrel</option>
+      <option value="Images/racoon.jpg">Racoon</option>
     </select>
   </body>
 </html>
