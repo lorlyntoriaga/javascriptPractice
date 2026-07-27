@@ -4,14 +4,16 @@
     <title> Delete / Replicate </title>
     <script>
         var a = new Array(2, 3.1, "Hello");
-        var b = [2, 5.8, "Good Morning"];
-        var c = [7, 13, 14.4];
-
-        a = a.concat(b,13,29,c)
         document.write(a + "<br/>")
-        document.write(a.reverse() + "<br/>")
+        delete a[0];
+        document.write(a + "<br/>")
+        document.write(a[0] + "<br/>")
 
-        document.write(a.join("-"))
+        // to replace the content inside the array
+        a[1] = 6.6
+        document.write(a[1] + "<br/>")
+
+    
      
     </script>
 </head>

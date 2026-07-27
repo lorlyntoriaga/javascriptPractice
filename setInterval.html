@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title> Date </title>
+    <script>
+        function continousDisplay(){
+            // settimeOut: Once;
+            setInterval(displayDate, 1000);
+
+            // clear interval
+            
+        }
+        
+        function displayDate() {
+            var d = new Date();
+            // for displaying Time without date
+            // var x = d.toLocaleTimeString();
+
+            // to display Date only without time
+            // var x = d.toLocaleDateString();
+            var x = d.toLocaleString();
+            document.getElementById("dateinfo").innerHTML = x;
+        }
+
+
+
+    </script>
+</head>
+
+<body onload="continousDisplay()">
+    Current Date <br/>
+    <p id="dateinfo"> </p>
+
+</body>
+
+</html>
