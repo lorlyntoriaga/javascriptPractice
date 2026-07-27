@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title> DOM Assignment </title>
+    <script>
+        function handleAddItem() {
+            var parent = document.getElementById("div1");
+            var child = document.createElement("p");
+            var text = document.createTextNode("TV - P15000");
+
+            child.appendChild(text);
+            parent.appendChild(child);
+        }
+
+
+        function handleRemoveItem() {
+            var d1 = document.getElementById("div1");
+            var p1 = document.getElementById("cellphone");
+
+            d1.removeChild(p1);
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div1">
+        <p id="laptop" value="laptop"> Laptop - P25000 </p>
+        <p id="cellphone" value="cellphone"> Cellphone - P10000 </p>
+
+        <input type="button" value="Add" onclick=handleAddItem()>
+        <input type="button" value="Remove" onclick=handleRemoveItem()>
+    </div>
+
+</body>
+
+</html>
