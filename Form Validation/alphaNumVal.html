@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>Alpha Numeric Validation</title>
+    <script>
+        function validateAlphaNum() {
+            var exp = /^[A-Za-z0-9\s]+$/;
+            var address = document.myform.address.value;
+            var result = exp.test(address);
+           
+            if(result){
+                alert("Validation Successfull!")
+                return true;
+            } else {
+                document.getElementById("err").innerHTML = "Please enter alpha numeric values only";
+                document.myform.address.focus();
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h3>Address</h3>
+    <form name="myform" action="alphaNum.php" onsubmit="return validateAlphaNum()">
+        Address: <textarea name="address" > </textarea>
+        <b id = "err"> </b></br>
+
+        <input type="submit" value="submit" />
+    </form>
+</body>
+
+</html>

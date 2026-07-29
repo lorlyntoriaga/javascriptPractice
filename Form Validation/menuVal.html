@@ -1,27 +1,35 @@
 <html>
-  <head>
-    <title>BOM Screen</title>
-    <script>
-      function validateMenu() {
-        var x = document.myform.num.value;
 
-        if (isNaN(x) || x < 1 || x > 10) {
-          alert("Please enter a valid number between 1-10");
-          document.myform.num.focus();
-          return false;
-        } else{
-            alert("That's a valid number!");
-            return true;
-        }
+<head>
+  <title>Menu Validation </title>
+  <script>
+    function validateMenu() {
+      var color = document.myform.color.value;
+
+      if (color == "") {
+        alert("Please select a color!")
+        document.myform.color.focus();
+        return false;
+      } else {
+        alert("You selected a color!");
+        return true;
       }
-    </script>
-  </head>
+    }
+  </script>
+</head>
 
-  <body>
-    <h3>Enter a number from 1 to 10:</h3>
-    <form name="myform" action="number.php" onsubmit="return validateMenu();">
-      Number: <input type="text" name="num" />
+<body>
+  <h3>Select a color: </h3>
+  <form name="myform" action="menu.php" onsubmit="return validateMenu();">
+    <select name = "color">
+      <option value=""> Select a color </option>
+      <option value="blue"> Blue </option>
+      <option value="red"> Red </option>
+      <option value="yellow"> Yellow </option>
+      <option value="green"> Green </option>
+
       <input type="submit" value="submit" />
-    </form>
-  </body>
+  </form>
+</body>
+
 </html>

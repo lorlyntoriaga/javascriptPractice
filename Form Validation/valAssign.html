@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+
+    <script>
+        function validateForm() {
+
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var password = document.getElementById("password").value;
+
+            // Name
+            if (name == "") {
+                alert("Please enter your name");
+                return false;
+            }
+
+            // Email
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailRegex.test(email)) {
+                alert("Enter a valid email address");
+                return false;
+            }
+
+            // Phone (exactly 10 digits)
+            var phoneRegex = /^[0-9]{10}$/;
+
+            if (!phoneRegex.test(phone)) {
+                alert("Phone number must be exactly 10 digits");
+                return false;
+            }
+
+            // Password (5 to 8 characters)
+            var passwordRegex = /^.{5,8}$/;
+
+            if (!passwordRegex.test(password)) {
+                alert("Password must be 5 to 8 characters");
+                return false;
+            }
+
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+
+<h2>Registration Form</h2>
+
+<form onsubmit="return validateForm()">
+
+    Name:<br>
+    <input type="text" id="name"><br><br>
+
+    Email:<br>
+    <input type="text" id="email"><br><br>
+
+    Phone:<br>
+    <input type="text" id="phone"><br><br>
+
+    Password:<br>
+    <input type="password" id="password"><br><br>
+
+    <input type="submit" value="Submit">
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>Checkbox Validation</title>
+    <script>
+        function validateCB() {
+            var valid = false;
+            if (document.getElementById("js").checked) {
+                valid = true;
+            }
+            else if (document.getElementById("jquery").checked) {
+                valid = true;
+            }
+            else if (document.getElementById("angularjs").checked) {
+                valid = true;
+            }
+            else if (document.getElementById("nodejs").checked) {
+                valid = true;
+            }
+            if (valid) {
+                alert("Validation is Success!")
+            } else {
+                alert("Please select one technology")
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h3>Select a technology: </h3>
+    <form name="myform" action="checkbox.php" onsubmit="return validateCB()">
+        <input type="checkbox" id="js" value="Javascript"/> Javascript
+        <input type="checkbox" id="jquery" value="JQuery"/> JQuery
+        <input type="checkbox" id="angularjs" value="AngularJs"/> AngularJs
+        <input type="checkbox" id="nodejs" value="NodeJs"/> NodeJs
+
+        <input type="submit" value="submit"/>
+    </form>
+</body>
+
+</html>

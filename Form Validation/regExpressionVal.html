@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>Regular Expression Validation</title>
+    <script>
+        function validateRegExp() {
+            var exp = /^[A-Za-z]+$/
+            var userName = document.myform.uname.value
+            var result = exp.test(userName)
+           
+            if(result){
+                alert("Validation Successfull!")
+            } else {
+                alert("Validation Failed! Try again")
+                document.myform.uname.focus();
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h3>User Registration</h3>
+    <form name="myform" action="regularExp.php" onsubmit="return validateRegExp()">
+        Username: <input type="text" name="uname" > 
+
+        <input type="submit" value="submit" />
+    </form>
+</body>
+
+</html>
